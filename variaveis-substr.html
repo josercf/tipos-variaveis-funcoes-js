@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //trabalhando com strings:
+        
+        /*
+           Os números de telefone são compostos por:
+           DDI: + e um código de país que pode conter 
+           2 ou três caracteres
+           DDD: Código da região, com 2 digitos
+           número: numero do telefone com 9 digitos
+        */
+
+        //Escreva um código que receba um telefone com 
+        //DDI e DDD e divida em 3 variaveis
+        //o número SEMPRE estará no formato abaixo:
+        //+XX DD N NNNNN-NNNN
+        //onde: XX representa DDI, DD o DDD e N o número de telefone
+        let telefone = '+55 11 9 8888-8888';
+        //corta o texto em 3 caracteres a oartir da posição 0
+        let ddi = telefone.substr(0, 3); //+55
+        
+        let ddd = telefone.substr(4, 2); //11
+
+        let numero = telefone.substr(6, 10);//9 8888-8888
+
+        alert(`Texto cortado:
+            ddi: ${ddi}
+            ddd: ${ddd}
+            numero: ${numero}
+        `)
+    </script>
+</body>
+</html>
